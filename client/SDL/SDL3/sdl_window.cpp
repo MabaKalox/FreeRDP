@@ -42,7 +42,8 @@ SdlWindow::SdlWindow(const std::string& title, Sint32 startupX, Sint32 startupY,
 	_window = SDL_CreateWindowWithProperties(props);
 	SDL_DestroyProperties(props);
 
-	auto scale = SDL_GetWindowPixelDensity(_window);
+	// auto scale = SDL_GetWindowPixelDensity(_window);
+	auto scale = 1.0f;
 	const int iscale = static_cast<int>(scale * 100.0f);
 	auto w = 100 * width / iscale;
 	auto h = 100 * height / iscale;
