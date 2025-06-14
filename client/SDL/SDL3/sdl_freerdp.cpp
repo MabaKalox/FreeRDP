@@ -648,7 +648,7 @@ static BOOL sdl_create_windows(SdlContext* sdl)
 			h = freerdp_settings_get_uint32(settings, FreeRDP_DesktopHeight);
 		}
 
-		Uint32 flags = SDL_WINDOW_HIGH_PIXEL_DENSITY;
+		Uint32 flags = 0;
 		auto startupX = SDL_WINDOWPOS_CENTERED_DISPLAY(id);
 		auto startupY = SDL_WINDOWPOS_CENTERED_DISPLAY(id);
 
